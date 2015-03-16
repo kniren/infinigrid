@@ -34,12 +34,13 @@
       }
     }
   }
-
-  
 }
 
-@mixin minigrid() {
-  $base-col:100%/$num-columns;
+@mixin minigrid($arg:'') {
+  $complex:false;
+  @if $arg == 'complex' {
+    $complex:true;
+  }
 
   .container {
     width: 100%;
@@ -49,12 +50,30 @@
     }
   }
 
-  @for $i from 1 through $num-columns {
-    .col-#{$i} {
-      float: left;
-      min-height:1px;
-      width: $base-col * $i;
-      padding:$gutter;
+  @if $complex {
+    @for $i from 1 through $num-columns {
+      @for $j from 1 through $num-columns {
+        @if $i < $j or $i == 1 {
+          $base-col:100%/$j;
+          .col-#{$i}-#{$j} {
+            float: left;
+            min-height:1px;
+            width: $base-col * $i;
+            padding:$gutter;
+          }
+        }
+      }
+    }
+  }
+  @else {
+    $base-col:100%/$num-columns;
+    @for $i from 1 through $num-columns {
+      .col-#{$i} {
+        float: left;
+        min-height:1px;
+        width: $base-col * $i;
+        padding:$gutter;
+      }
     }
   }
 
