@@ -866,6 +866,9 @@ h6 {
   text-align: center;
   color: #bbb; }
 
+* {
+  box-sizing: border-box; }
+
 body {
   margin: 40px 0;
   background-color: #fbfbfb; }
