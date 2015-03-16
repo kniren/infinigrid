@@ -1,0 +1,30 @@
+@import 'config';
+
+@mixin minigrid() {
+  $base-col:100%/$num-columns;
+
+  .container {
+    width: 100%;
+    max-width: $container-width;
+    * {
+      box-sizing: border-box;
+    }
+  }
+
+  @for $i from 1 through $num-columns {
+    .col-#{$i} {
+      float: left;
+      min-height:1px;
+      width: $base-col * $i;
+      padding:$gutter;
+    }
+  }
+
+  // Clearfix hack
+  .row:before,
+  .row:after {
+    content:"";
+    display: table;
+    clear:both;
+  }
+}
