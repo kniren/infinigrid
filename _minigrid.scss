@@ -1,5 +1,43 @@
 @import 'config';
 
+@mixin mediaQueries() {
+  @media all and (max-width:800px) {
+    $base-col:100%/$num-columns;
+    @for $i from 1 through $num-columns {
+      .col-#{$i} {
+        $col-width:$base-col * $i * 2;
+        @if $col-width > 100 {
+          width: 100%;
+        }
+        @else if ($num-columns/2 % $i) != 0 {
+          width: 100%;
+        } @else {
+          width: $col-width;
+        }
+      }
+    }
+  }
+
+  @media all and (max-width:650px) {
+    $base-col:100%/$num-columns;
+    @for $i from 1 through $num-columns {
+      .col-#{$i} {
+        $col-width:$base-col * $i * 4;
+        @if $col-width > 100 {
+          width: 100%;
+        }
+        @else if ($num-columns/4 % $i) != 0 {
+          width: 100%;
+        } @else {
+          width: $col-width;
+        }
+      }
+    }
+  }
+
+  
+}
+
 @mixin minigrid() {
   $base-col:100%/$num-columns;
 
