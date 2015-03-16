@@ -1,6 +1,6 @@
 @import 'config';
 
-@mixin mediaQueries($arg: '') {
+@mixin infinigridMediaQueries($arg: '') {
   $complex:false;
   @if $arg == 'complex' {
     $complex:true;
@@ -55,7 +55,7 @@
   }
 }
 
-@mixin minigrid($arg:'') {
+@mixin infinigrid($arg:'') {
   $complex:false;
   @if $arg == 'complex' {
     $complex:true;
