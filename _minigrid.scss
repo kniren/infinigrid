@@ -78,10 +78,7 @@
             float: left;
             min-height:1px;
             width: $base-col * $i;
-            padding-right:$gutter;
-          }
-          .col-#{$i}-#{$j}:last-child {
-            padding:0;
+            padding:$gutter;
           }
         }
       }
@@ -94,10 +91,7 @@
         float: left;
         min-height:1px;
         width: $base-col * $i;
-        padding-right:$gutter;
-      }
-      .col-#{$i}:last-child {
-        padding:0;
+        padding:$gutter;
       }
     }
   }
