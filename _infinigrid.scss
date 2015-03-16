@@ -63,6 +63,7 @@
 
   .container {
     width: 100%;
+    padding: 0 $gutter;
     max-width: $container-width;
     * {
       box-sizing: border-box;
@@ -94,6 +95,10 @@
         padding:$gutter;
       }
     }
+  }
+  .row {
+    margin-right: -$gutter;
+    margin-left: -$gutter;
   }
 
   // Clearfix hack
