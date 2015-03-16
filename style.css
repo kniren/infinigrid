@@ -866,6 +866,13 @@ h6 {
   text-align: center;
   color: #bbb; }
 
+.row :hover {
+  transition: color 0.5s;
+  transition: background-color 0.5s;
+  background-color: #ccc;
+  color: white;
+  content: "yeah"; }
+
 * {
   box-sizing: border-box; }
 
