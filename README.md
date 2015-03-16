@@ -13,7 +13,7 @@ column layout we will have also 11, 10, 9, etc. columns divisions
 available.
 
 You can see an example of both modes
-[here](kniren.github.io/infinigrid).
+[here](http://kniren.github.io/infinigrid).
 
 Installation & usage
 --------------------
