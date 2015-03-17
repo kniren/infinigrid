@@ -1,0 +1,47 @@
+@import 'infinigrid/infinigrid';
+@import 'infinigrid/infinigrid';
+@import 'minitype/minitype';
+
+@include infinigrid('complex');
+@include infinigridMediaQueries('complex');
+@include infinigrid('simple');
+@include infinigridMediaQueries();
+@include minitype();
+
+[class*='col-'] {
+  background-color: #f4f4f4; 
+}
+[class*='col-'] > p {
+  background-color: #eee; 
+  padding: 10px 0;
+  margin: 0;
+  text-align: center; 
+  color: #bbb; 
+}
+
+.row {
+  :hover {
+    transition: color 0.5s;
+    transition: background-color 0.5s;
+    background-color: #ccc; 
+    color:white;
+    content:"yeah";
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin:40px 0;
+  background-color: #fbfbfb;
+}
+
+h2 {
+  color:#555;
+}
+
+.centered {
+  margin-left:auto;
+  margin-right:auto;
+}
